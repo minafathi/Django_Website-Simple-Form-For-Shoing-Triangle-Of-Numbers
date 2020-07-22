@@ -1,0 +1,42 @@
+
+{% load static from staticfiles %}
+<html>
+    <head>
+        <link rel='stylesheet' href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1 class='ttl'>Triangle Form</h1>
+        <h4><a class="hm" href="{% url 'home' %}">Home</a></h4>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="frm">
+                    <form action="{% url 'triform' %}" method="POST">
+                        {% csrf_token %}
+                        
+                        <div class="inp">
+                            <h4>
+                                {{trianform.number.label_tag}} {{trianform.number}}
+                            </h4>
+                            <p></p>
+                        <button class="sub" type="submit" value="submit the number">submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="note">
+                    <h1>{{ note }}</h1>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </body>
+</html>
+    
+

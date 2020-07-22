@@ -1,0 +1,30 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel='stylesheet' href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="home">
+            <h1 class="ttl">Triangle Show</h1>
+            <div class="but"><a href="{% url 'triform' %}">Go to Triangle Form</a></div>
+            <p class="desc">
+                Here, I represent a form in above url and there is a single 
+                input field in this form. You can enter a number between 1 to
+                9 and see a triangle built for you from 1 to the number you 
+                entered. I just aimed to built a simple form returning some 
+                calculated data with the input.
+
+            </p>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+
